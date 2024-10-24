@@ -169,8 +169,8 @@
         .empty-section {
             height: 500px;
             width: 100%;
-            background-color: rgb(221, 218, 218);
-            padding: 20px;
+            
+           
         }
 
         .work-alongside-section {
@@ -319,23 +319,18 @@
 
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-            padding: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            justify-content: center;
         }
 
         .gallery-item {
             position: relative;
             width: 100%;
-            padding-bottom: 100%; /* Creates a 1:1 aspect ratio */
+            padding-bottom: 100%;
             overflow: hidden;
-            border-radius: 10px; /* Optional: rounded corners */
+            border-radius: 10px;
             transition: transform 0.3s ease;
-        }
-
-        .gallery-item:hover {
-            transform: scale(1.05); /* Expand the item by 5% on hover */
-            z-index: 1; /* Ensure the expanded item appears above others */
         }
 
         .gallery-item img {
@@ -344,12 +339,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover; /* This will crop the image to fill the square */
+            object-fit: cover;
             transition: transform 0.3s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1); /* Zoom in the image slightly on hover */
         }
 
         .caption {
@@ -365,8 +356,29 @@
             transition: opacity 0.3s ease;
         }
 
+        .gallery-item:hover {
+            transform: scale(1.05);
+            z-index: 1;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
         .gallery-item:hover .caption {
             opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
         }
 
         .beyond-work-section p {
@@ -631,118 +643,72 @@
         </div>
     </div>
 
-   <div style="text-align: center; margin: 40px;">
+   <div style="text-align: center; margin: 40px auto; max-width: 1200px; padding: 0 20px;">
         <div class="beyond-work-section">
             <p><span>Beyond</span> Work</p>
         </div>
         <div class="gallery">
             <div class="gallery-item">
-                <img src="assets/img.jpg" alt="Image 1">
-                <div class="caption">Image 1 Description</div>
+                <img src="assets/rain.png" alt="Image 1">
+                <div class="caption">Founders, rain, & deep talks —perfect combo.</div>
             </div>
             <div class="gallery-item">
-                <img src="assets/img4.png" alt="Image 2">
-                <div class="caption">Image 2 Description</div>
+                <img src="assets/swimming.png" alt="Image 2">
+                <div class="caption">Pool volleys in the tranquil resort—game on!</div>
             </div>
             <div class="gallery-item">
-                <img src="assets/img8.jpg" alt="Image 3">
-                <div class="caption">Image 3 Description</div>
+                <img src="assets/swimming2.png" alt="Image 3">
+                <div class="caption">Poolside cake fight at the annual team offsite.</div>
             </div>
             <div class="gallery-item">
-                <img src="assets/img5.jpg" alt="Image 4">
-                <div class="caption">Image 4 Description</div>
+                <img src="assets/kerala.png" alt="Image 4">
+                <div class="caption">Kerala vibes: When tradition goes full swag!</div>
             </div>
             <div class="gallery-item">
-                <img src="assets/img6.jpg" alt="Image 5">
-                <div class="caption">Image 5 Description</div>
+                <img src="assets/nightparty.png" alt="Image 5">
+                <div class="caption">Who needs sleep at the team offsite anyway?</div>
             </div>
             <div class="gallery-item">
-                <img src="assets/img7.jpg" alt="Image 6">
-                <div class="caption">Image 6 Description</div>
+                <img src="assets/party.png" alt="Image 6">
+                <div class="caption">December 31st: Resolutions start tomorrow, not today… right?</div>
             </div>
             <div class="gallery-item">
-                <img src="assets/img.jpg" alt="Image 1">
-                <div class="caption">Image 1 Description</div>
+                <img src="assets/boat.png" alt="Image 7">
+                <div class="caption">Paddling through God's own country</div>
             </div>
             <div class="gallery-item">
-                <img src="assets/img4.png" alt="Image 2">
-                <div class="caption">Image 2 Description</div>
+                <img src="assets/img5.jpg" alt="Image 8">
+                <div class="caption">Too cool to keep a straight face—ever!</div>
             </div>
             <div class="gallery-item">
-                <img src="assets/img8.jpg" alt="Image 3">
-                <div class="caption">Image 3 Description</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/img5.jpg" alt="Image 4">
-                <div class="caption">Image 4 Description</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/img6.jpg" alt="Image 5">
-                <div class="caption">Image 5 Description</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/img7.jpg" alt="Image 6">
-                <div class="caption">Image 6 Description</div>
+                <img src="assets/cricket.png" alt="Image 9">
+                <div class="caption">Just another weekend in sports mode.</div>
             </div>
         </div>
-
     </div>  
         
-    <div style="text-align: center; margin: 40px;">
+    <div style="text-align: center; margin: 40px auto; max-width: 1200px; padding: 0 20px;">
         <div class="beyond-work-section">
             <p><span>Beyond</span> Success</p>
         </div>
         <div class="gallery">
             <div class="gallery-item">
                 <img src="assets/img.jpg" alt="Image 1">
-                <div class="caption">Image 1 Description</div>
+                <div class="caption">Roundtable with ISBIANs 2024, Hyderabad.</div>
             </div>
             <div class="gallery-item">
                 <img src="assets/img4.png" alt="Image 2">
-                <div class="caption">Image 2 Description</div>
+                <div class="caption">Google I/O Connect 2024, Bangalore.</div>
             </div>
             <div class="gallery-item">
                 <img src="assets/img8.jpg" alt="Image 3">
-                <div class="caption">Image 3 Description</div>
+                <div class="caption">Mr. Arun Venkataraman, the Assistant Secretary of Commerce for Global Markets and Director General of the U.S. and Foreign Commercial Service.</div>
             </div>
             <div class="gallery-item">
-                <img src="assets/img5.jpg" alt="Image 4">
-                <div class="caption">Image 4 Description</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/img6.jpg" alt="Image 5">
-                <div class="caption">Image 5 Description</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/img7.jpg" alt="Image 6">
-                <div class="caption">Image 6 Description</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/img.jpg" alt="Image 1">
-                <div class="caption">Image 1 Description</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/img4.png" alt="Image 2">
-                <div class="caption">Image 2 Description</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/img8.jpg" alt="Image 3">
-                <div class="caption">Image 3 Description</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/img5.jpg" alt="Image 4">
-                <div class="caption">Image 4 Description</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/img6.jpg" alt="Image 5">
-                <div class="caption">Image 5 Description</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/img7.jpg" alt="Image 6">
-                <div class="caption">Image 6 Description</div>
+                <img src="assets/img7.jpg" alt="Image 4">
+                <div class="caption">Google Play App Scale Academy 2022, Delhi. Jitendra Vijay, CEO of MeitY Startup Hub.</div>
             </div>
         </div>
-
     </div>
 
     <div class="footer-section">
