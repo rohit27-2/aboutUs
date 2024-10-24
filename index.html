@@ -452,6 +452,76 @@
                 --s: 120px; /* Further adjust size for mobile screens */
             }
         }
+
+        .card-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .card-container h1 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .card:hover .card-image img {
+            transform: scale(1.1);
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .card-content p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -523,31 +593,39 @@
         <h1>We <span style="color: #007bff;">Invest</span> in our Problem-Solvers</h1>
         <div class="card-grid">
             <div class="card">
-                <img src="assets/1.png" alt="Card Image">
+                <div class="card-image">
+                    <img src="assets/1.png" alt="ESOPs">
+                </div>
                 <div class="card-content">
                     <h2>ESOPs: Own a Piece of the Future</h2>
                     <p>Our Employee Stock Option Plan (ESOP) gives you the opportunity to have a real stake in our success. As we grow, so does your investment.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="assets/2.png" alt="Card Image">
+                <div class="card-image">
+                    <img src="assets/2.png" alt="ESOPs Buyback Program">
+                </div>
                 <div class="card-content">
                     <h2>ESOPs Buyback Program: Reap the Rewards</h2>
-                    <p>With our ESOP buyback program, you have the chance to cash in on your shares. You’re not just a part of our success—you benefit from it, too!</p>
+                    <p>With our ESOP buyback program, you have the chance to cash in on your shares. You're not just a part of our success—you benefit from it, too!</p>
                 </div>
             </div>
             <div class="card">
-                <img src="assets/3.png" alt="Card Image">
+                <div class="card-image">
+                    <img src="assets/3.png" alt="Medical Cover">
+                </div>
                 <div class="card-content">
                     <h2>Medical Cover: Your Health Matters</h2>
-                    <p>Your well-being is our priority. That’s why we offer a medical cover of ₹5 lakhs for you & your family. We’ve got you covered.</p>
+                    <p>Your well-being is our priority. That's why we offer a medical cover of ₹5 lakhs for you & your family. We've got you covered.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="assets/4.png" alt="Card Image">
+                <div class="card-image">
+                    <img src="assets/4.png" alt="Team Off-sites">
+                </div>
                 <div class="card-content">
                     <h2>Team Off-sites: Party Hard, Work Harder</h2>
-                    <p>Exciting off-sites regularly to relax, bond, and have fun while exploring new places. That’s a perfect balance of work and play!</p>
+                    <p>Exciting off-sites regularly to relax, bond, and have fun while exploring new places. That's a perfect balance of work and play!</p>
                 </div>
             </div>
         </div>
