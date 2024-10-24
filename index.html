@@ -534,6 +534,17 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        @media (max-width: 768px) {
+            .info {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .info > div {
+                max-width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
